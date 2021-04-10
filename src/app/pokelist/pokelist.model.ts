@@ -5,7 +5,7 @@ export class Pokemon{
     public weight:string;
     public types:Array<string>;
     public abilities:Array<string>;
-
+    
     constructor(){}
 
 }
