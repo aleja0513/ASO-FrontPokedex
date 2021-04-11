@@ -4,6 +4,7 @@
     [disabled] = "disabled"
     (page)="getListPokemon($event)">
 </mat-paginator>
+
 <mat-progress-spinner mode="indeterminate" *ngIf="IsWait"></mat-progress-spinner>
 <div *ngIf="!IsWait">
     
