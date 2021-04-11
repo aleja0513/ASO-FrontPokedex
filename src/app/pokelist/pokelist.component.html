@@ -1,5 +1,13 @@
 
-
+    <mat-paginator [length]="length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [disabled] = "disabled"
+    (page)="getListPokemon($event)">
+</mat-paginator>
+<mat-progress-spinner mode="indeterminate" *ngIf="IsWait"></mat-progress-spinner>
+<div *ngIf="!IsWait">
+    
 
     <mat-grid-list  cols="4" rowHeight="2:3">
         <mat-grid-tile *ngFor="let poke of pokelist">
@@ -24,11 +32,5 @@
                 </mat-card-actions>
             </mat-card>
         </mat-grid-tile>
-    </mat-grid-list>    
-    <mat-paginator [length]="length"
-        [pageSize]="size"
-        [pageIndex]="page"
-        [disabled] = "disabled"
-        (page)="getListPokemon($event)">
-    </mat-paginator>
-
+    </mat-grid-list>  
+</div>

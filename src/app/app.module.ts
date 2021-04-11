@@ -9,7 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule} from '@angular/material/card';  
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PokemonComponent } from './pokemon/pokemon.component';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { PokemonComponent } from './pokemon/pokemon.component';
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent] 
