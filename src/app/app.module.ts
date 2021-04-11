@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule} from '@angular/material/card';  
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokelistComponent
+    PokelistComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,

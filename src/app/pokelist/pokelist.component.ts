@@ -1,9 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Pokemon } from './pokelist.model';
 import { PokelistService } from './pokelist.service';
-
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokelist',
@@ -14,13 +12,13 @@ import { PokelistService } from './pokelist.service';
 export class PokelistComponent implements OnInit {
 
   public pokelist : Array<Pokemon>;
-  public Pokemon : Pokemon;
+  
   page:number=0;
   size:number=20;
   length:number;
   disabled:boolean;
 
-  constructor(public service: PokelistService ){ }
+  constructor(public service: PokelistService, private router:Router ){ }
 
   ngOnInit(): void {
       this.disabled = true;
@@ -34,6 +32,10 @@ export class PokelistComponent implements OnInit {
       error => {console.log(error)}
     );
 
+  }
+
+  public getPokemonDetail(obj){
+    this.router.navigate(['/getPokemon/'+obj.name]);
   }
 
 

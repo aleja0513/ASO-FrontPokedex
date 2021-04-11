@@ -1,0 +1,39 @@
+
+
+    <mat-grid-list cols="1" rows="1" rowHeight="2:1">
+        <mat-grid-tile>
+            <mat-card class="card-page">
+                <mat-card-header>
+                    <mat-card-title>{{pokemon.name}}</mat-card-title>
+                    <mat-card-subtitle>
+                        {{pokemon.descriptions[0]}} 
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src={{pokemon.photo}} alt="Default front image">
+                <mat-card-content>
+                    <p>
+                        <b>weight:</b> {{pokemon.weight}}
+                    </p>
+                    <p>
+                        <b>Types:</b> {{pokemon.types}} 
+                    </p>    
+                    <p>
+                        <b>Abilites:</b> {{pokemon.abilities}} 
+                    </p>
+                   
+                        <b>Evolutions:</b> 
+                        <span *ngFor="let evol of pokemon.evolutions.reverse()">
+                            {{evol}} ->
+                        </span>
+                       
+                   
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <button  routerLink="/"  mat-button>Back</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
